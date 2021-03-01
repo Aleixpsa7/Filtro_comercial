@@ -6,8 +6,8 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-                <field name="user_id" position="replace">
-                    <field name="user_id" domain="[('department_id','in', sales)]"/>
+                <field name="user_id" position="attribute">
+                    <field name="user_id" domain="[('internal users','=', False)]"/>
                 </field>
             </field>
         </record>
