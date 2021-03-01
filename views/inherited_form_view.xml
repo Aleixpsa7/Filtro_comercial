@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
                 <field name="user_id" position="replace">
-                    <field name="user_id" domain="[('department_id.member_ids.user_id', 'in', [user.id])]"/>
+                    <field name="user_id" domain="[('group_by' : 'sales')]"/>
                 </field>
             </field>
         </record>
